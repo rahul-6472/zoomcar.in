@@ -299,7 +299,7 @@
                 <span id="cancel">X</span>
                 <h5>New Here? Welcome!</h5>
                 <p>The mobile number has not been registered with us. Lets create a new account.</p>
-                <div><a href="./signup.html">Register</a></div>
+                <div><a href="./signup-1.html">Register</a></div>
             </div>
         </div>
 
@@ -329,6 +329,7 @@
             document.querySelector("#modal-button-at").style.background = "rgb(6, 188, 6)";
             document.querySelector("#modal-button-at").style.cursor = "pointer";
 
+
         }
     })
     document.getElementById("login-modal-mob-number-at").addEventListener("keydown",function(){
@@ -347,15 +348,21 @@
     });
     // -------------------------modal events end-------------------------
 
-    let registeredusers = JSON.parse(localStorage.getItem("users"));
-    if(registereduser == null){
-        let u1 = {
-            email: "admin@email.com",
-            password: "admin@Test",
-            phone: "+918379024280"
-        }
+    // let registeredusers = JSON.parse(localStorage.getItem("users"));
+    // if(registereduser == null){
+    //     let u1 = {
+    //         email: "admin@email.com",
+    //         password: "admin@Test",
+    //         phone: "+918379024280"
+    //     }
 
-        registeredusers.push(u1);
-    }
+    //     registeredusers.push(u1);
+    // }
+
+    document.getElementById("modal-button-at").addEventListener("click",function(){
+        console.log("Hello world");
+        document.querySelector(".entermobnumber-at").style.visibility = "hidden";
+        document.querySelector(".login-registermodal-at").style.visibility="visible";
+    });
 </script>
 </html>
