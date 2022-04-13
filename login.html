@@ -309,19 +309,29 @@
     </div>
 </body>
 <script>
+     let registeredusers = localStorage.getItem("registeredusers");
+     console.log(registeredusers);
+     if(registeredusers == null){
+        console.log("hello world");
+        localStorage.setItem("registeredusers",JSON.stringify([]));
+
+     }
     // ----------------------modal events---------------------------
 
     
     document.getElementById("login-mob-number-at").addEventListener("click", function(){
+        event.preventDefault();
         document.querySelector(".entermobnumber-at").style.visibility = "visible";
     });
 
 
     document.getElementById("modal-goback-at").addEventListener("click", function(){
+        event.preventDefault();
         document.querySelector(".entermobnumber-at").style.visibility = "hidden";
     });
 
     document.getElementById("login-modal-mob-number-at").addEventListener("input",function(){
+        event.preventDefault();
         let cnt = document.getElementById("login-modal-mob-number-at").value;
         // cnt = parseInt(cnt);
         if(cnt.length == 10){
@@ -333,6 +343,7 @@
         }
     })
     document.getElementById("login-modal-mob-number-at").addEventListener("keydown",function(){
+        event.preventDefault();
         let cnt = document.getElementById("login-modal-mob-number-at").value;
         // cnt = parseInt(cnt);
         if(cnt.length < 11 || cnt.length > 11){
@@ -344,25 +355,41 @@
     });
 
     document.getElementById("cancel").addEventListener("click",function(){
+        event.preventDefault();
         document.querySelector(".login-registermodal-at").style.visibility = "hidden";
     });
     // -------------------------modal events end-------------------------
 
-    // let registeredusers = JSON.parse(localStorage.getItem("users"));
-    // if(registereduser == null){
-    //     let u1 = {
-    //         email: "admin@email.com",
-    //         password: "admin@Test",
-    //         phone: "+918379024280"
-    //     }
 
-    //     registeredusers.push(u1);
-    // }
-
+    // if user is not registered
     document.getElementById("modal-button-at").addEventListener("click",function(){
-        console.log("Hello world");
-        document.querySelector(".entermobnumber-at").style.visibility = "hidden";
-        document.querySelector(".login-registermodal-at").style.visibility="visible";
+        // console.log("Hello world");
+        event.preventDefault();
+        // if(registeredusers == null){
+        //     localStorage.setItem("registeredusers",JSON.stringify([]));
+        // }
+        let mobnum = document.getElementById("login-modal-mob-number-at").value;
+        let flag = 0;
+        // console.log(mobnum);
+        registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
+        registeredusers.forEach(function(user){
+            if(mobnum == user.phone){
+                flag = 1;
+            }
+            
+        });
+        if(flag == 0){
+            document.querySelector(".entermobnumber-at").style.visibility = "hidden";
+            document.querySelector(".login-registermodal-at").style.visibility="visible";
+            mobilenumber =JSON.parse(localStorage.getItem("mobilenumber"));
+            mobilenumber = mobnum;
+            localStorage.setItem("mobilenumber",JSON.stringify(mobilenumber));
+            localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
+        }
+        else{
+            localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
+            location.href="./login-2.html";
+        }
     });
 </script>
 </html>

@@ -96,6 +96,8 @@
     </div>
 </body>
 <script>
+
+
     document.getElementById("register-password-at").addEventListener("input",function(){
         let pass = document.querySelector("#register-password-at").value;
         // let email = document.querySelector("#register-name-at").value;
@@ -109,7 +111,31 @@
     });
 
     document.getElementById("modal-button-at").addEventListener("click",function(){
-        location.href = "./otp-form.html"
+        event.preventDefault();
+        let name = document.querySelector("#register-name-at").value;
+        let password = document.querySelector("#register-password-at").value;
+
+        let phone = JSON.parse(localStorage.getItem("mobilenumber"));
+        let email = JSON.parse(localStorage.getItem("email"));
+        
+        let registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
+        // if(registeredusers == null){
+        //     localStorage.setItem()
+        // }
+        let data = {
+            name:name,
+            email:email,
+            phone:parseInt(phone),
+            password:password,
+            status:"not active"
+        };
+
+        registeredusers.push(data);
+        localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
+        location.href = "./otp-form.html";
     });
+
+
+
 </script>
 </html>
