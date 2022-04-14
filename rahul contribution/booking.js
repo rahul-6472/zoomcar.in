@@ -17,6 +17,7 @@ function closeNav() {
   document.getElementById("side-navbar").style.width = "0";
   document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0)";
   document.getElementById("main").style.width = "0";
+
   document.getElementById("main").style.height = "0";
   document.getElementById("main").style.position = "none";
   document.getElementById("main").style.top = "0";
@@ -29,7 +30,7 @@ let carsDetails = [
       "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/57b1b1b9180a56fba0156135ea6dc8e9f058303d.jpg?1621260558",
 
     carname: "Maruti Wagon R",
-    transmission: "Manual",
+    transmission: "Automatic",
     fueltype: "petrol",
     seats: "5seats",
     cartype: "hatchback",
@@ -46,7 +47,7 @@ let carsDetails = [
     transmission: "Manual",
     fueltype: "petrol",
     seats: "5seats",
-    cartype: "hatchback",
+    cartype: "SUV",
     deliverytype: "Home Delivery",
     ratings: "4.7 (66) 40,936 kms driven",
     delivery: "Home Delivery & pickup available",
@@ -60,7 +61,7 @@ let carsDetails = [
     transmission: "Manual",
     fueltype: "petrol",
     seats: "7seats",
-    cartype: "hatchback",
+    cartype: "SUV",
     deliverytype: "Home Delivery",
     ratings: "4.5 (69) 89,977 kms driven",
     delivery: "Home Delivery & pickup available",
@@ -72,18 +73,21 @@ let carsDetails = [
       "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/14bbe6f0419d819891f9c4b76b798130fa2d7732.JPG?1627102878",
 
     carname: "Maruti S-Cross",
-    transmission: "Manual",
+    transmission: "Automatic",
     fueltype: "petrol",
     seats: "7seats",
     cartype: "hatchback",
-    deliverytype: "Home Delivery",
+    deliverytype: "Airport",
     ratings: "5 (8) 26,057 kms driven",
     delivery: "Home Delivery & pickup available",
     rentprice: "2,700",
   },
 ];
 
+localStorage.setItem("carsDetailsData", JSON.stringify(carsDetails));
+
 function displayData(carsDetails) {
+  document.getElementById("cars-box").innerHTML = "";
   carsDetails.forEach((car) => {
     let card = document.createElement("div");
 
@@ -145,21 +149,145 @@ function displayData(carsDetails) {
 
 displayData(carsDetails);
 
-let filterType = document.getElementsByClassName("filtertext");
-// document.getElementByClassName("filtertext").style.backgroundColor =
-// "#10a310;";
-for (type of filterType) {
-  type.addEventListener("click", (ele) => {
-    let filterCriteria = ele.target.innerText;
+// filters for each type
 
-    let filteredData = filterType.filter((e)=>{
-      if ( filterCriteria == "5"){
-        return true
-      }
-      else{
-        return false
-      }
-    })
-    displayData(filteredData)
+// filter for 5 seats
+function filterFor5(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.seats == "5seats") {
+      return true;
+    } else {
+      return false;
+    }
   });
+  return filteredData;
 }
+
+document.getElementById("filter5").addEventListener("click", function () {
+  let data = filterFor5(carsDetails);
+  displayData(data);
+});
+
+// filter for 7 seats
+function filterFor7(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.seats == "7seats") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document.getElementById("filter7").addEventListener("click", function () {
+  let data = filterFor7(carsDetails);
+  displayData(data);
+});
+
+// filter for manual tranmission
+function filterForManual(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.transmission == "Manual") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document.getElementById("filtermanual").addEventListener("click", function () {
+  let data = filterForManual(carsDetails);
+  displayData(data);
+});
+//  filter for automatic transmission
+function filterForAutomatic(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.transmission == "Automatic") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document
+  .getElementById("filterautomatic")
+  .addEventListener("click", function () {
+    let data = filterForAutomatic(carsDetails);
+    displayData(data);
+  });
+// filter for suv type
+function filterForSuv(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.cartype == "SUV") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document.getElementById("filtersuv").addEventListener("click", function () {
+  let data = filterForSuv(carsDetails);
+  displayData(data);
+});
+
+// filter for hatchback type
+
+function filterForHatchback(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.cartype == "hatchback") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document
+  .getElementById("filterhatchback")
+  .addEventListener("click", function () {
+    let data = filterForHatchback(carsDetails);
+    displayData(data);
+  });
+
+// filter for home delivery
+
+function filterForHomeDelivery(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.deliverytype == "Home Delivery") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document.getElementById("filterhome").addEventListener("click", function () {
+  let data = filterForHomeDelivery(carsDetails);
+  displayData(data);
+});
+
+// filter for airport delivery
+
+function filterForAirport(carsDetails) {
+  let filteredData = carsDetails.filter((cars) => {
+    if (cars.deliverytype == "Airport") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return filteredData;
+}
+
+document.getElementById("filterairport").addEventListener("click", function () {
+  let data = filterForAirport(carsDetails);
+  displayData(data);
+});

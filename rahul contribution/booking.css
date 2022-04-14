@@ -7,7 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif;
   margin: auto;
-  background-color: whitesmoke;
+  background: whitesmoke;
 }
 #navbar {
   background-color: #000;
@@ -101,8 +101,7 @@ body {
   color: #323a44;
   font-size: 14px;
 }
-
-@media (max-width: 900px) {
+@media all and (max-width: 900px) {
   #navbar nav ul {
     width: 0;
     font-size: 0;
@@ -114,14 +113,18 @@ body {
 /* booking page css */
 #container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
 }
 #container > #filter-box {
   width: 20%;
-  height: 95vh;
-  margin: -90px 15px 0 15px;
+  height: 85vh;
+  margin: 0;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  z-index:-1;
   background-color: white;
   padding: 25px 54px;
   border-radius: 4px;
@@ -129,7 +132,60 @@ body {
   box-shadow: 0px 0px 1px 1px #e0e0e0;
   font-size: 12px;
 }
+#container-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  position: absolute;
+  top: 160px;
+  right: 0px;
+  padding-left: -100px;
+  z-index:-1;
+}
+#cars-box {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin-top: 120px;
+  gap: 12px;
+  padding-right: 20px;
+}
+#cars-box > div {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  color: #212121;
+  padding: 10px 60px 10px 12px;
+  cursor: pointer;
+  height: 120px;
+}
+#container-right .info-box {
+  background: #fff;
+  color: #212121;
+  height: 50px;
+
+  margin-bottom: -100px;
+  width: 90%;
+  padding: 20px 8px 20px 20px;
+}
+.info-box > .heading h5 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f1f;
+  margin-bottom: 7px;
+}
+.info-box > .text p {
+  font-size: 11px;
+  color: #a8a8a8;
+  letter-spacing: 0.4px;
+  padding-top: 0;
+}
 .heading-list {
   display: flex;
   justify-content: flex-start;
@@ -160,27 +216,28 @@ body {
   padding: 6px;
 }
 .filtertext {
-  padding: 10px 4px;
+  padding: 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: bold;
 }
 .text1 {
-  padding: 10px 4px;
+  padding: 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: bold;
 }
-
-#cars-box {
-  width: 68%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  margin-top: 120px;
-  gap: 12px;
-  padding-right: 20px;
+#filter5 {
+  padding: 0 15px;
 }
+
+#filter7 {
+  padding: 0 15px;
+}
+#filtersuv {
+  padding: 0 12px;
+}
+
 .line-between {
   background-color: #e0e0e0;
   width: 0.5px;
@@ -189,35 +246,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-#cars-box > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  color: #212121;
-  padding: 10px 60px 10px 10px;
-  cursor: pointer;
-  height: 120px;
-}
-#cars-box .info-box {
-  display: flex;
-  flex-direction: column;
-  height: 50px;
-}
-.info-box > .heading {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 14px;
-  font-weight: bold;
-  color: #1f1f1f;
-  margin-bottom: 4px;
-}
-.info-box > .text {
-  font-size: 11px;
-  color: #a8a8a8;
-  letter-spacing: 0.4px;
-  padding-top: 0;
-}
+
 .info-bluebox {
   background-color: #f0f4ff;
   color: #5160c2;
@@ -226,8 +255,6 @@ body {
   border-radius: 4px;
   margin-bottom: 24px;
 }
-
-/* car box div */
 
 .bookBtn {
   background-color: white;
@@ -251,7 +278,6 @@ body {
 .bookBtn:hover {
   background-color: #10a310;
   color: #fff;
-
 }
 
 .carname {
@@ -281,7 +307,7 @@ body {
 }
 
 .detailsDiv {
-  margin-left: -260px;
+  margin-left: -180px;
   padding: 20px 20px;
 }
 
@@ -298,8 +324,11 @@ body {
   color: #a8a8a8;
   font-family: Arial, Helvetica, sans-serif, Arial, sans-serif;
   padding-bottom: 15px;
- 
 }
-.seatsFuelTransmission > p{
-  padding-right:6px;
+.seatsFuelTransmission > p {
+  padding-right: 6px;
+}
+.list-box {
+  padding: 10px 25px;
+  border-radius: 4px;
 }

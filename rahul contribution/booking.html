@@ -14,83 +14,81 @@
   </head>
   <body>
     <div id="navbar">
-        <div class="hamburger-pointer"  id = "openNav" onclick = "openNav()">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div id="logo">
-          <a>ZOOMCAR</a>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="">Become a Host</a>
-            </li>
-            <li>
-              <a href="">ZMS</a>
-            </li>
-            <li>
-              <a href="">Login/Signup</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="hamburger-pointer"  id = "openNav" onclick = "openNav()">
+        <i class="fa-solid fa-bars"></i>
       </div>
+      <div id="logo">
+        <a>ZOOMCAR</a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="">Become a Host</a>
+          </li>
+          <li>
+            <a href="">ZMS</a>
+          </li>
+          <li>
+            <a href="">Login/Signup</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
+    <div id = "main">
 
-      <div id = "main">
+    </div>
 
+    <div id="side-navbar">
+    
+
+      <a href="" class = "active"><i class="fa-solid fa-user"></i>Login or Signup</a>
+
+      <a href="" class = "change-city">
+        <div>
+          <i class="fa-solid fa-location-dot"></i></i> Change  City
         </div>
 
-  
-      <div id="side-navbar">
-       
-  
-        <a href="" class = "active"><i class="fa-solid fa-user"></i>Login or Signup</a>
-  
-        <a href="" class = "change-city">
-          <div>
-            <i class="fa-solid fa-location-dot"></i></i> Change  City
-          </div>
-  
-          <div class = "cityName">
-                Bangalore
-          </div>
-        
-        </a>
-        <a href="">Supermiler club</a>
-        <a href=""><i class="fa-solid fa-memo"></i>Zoomcar Fleet Vehicles Policies </a>
-        <a href=""><i class="fa-solid fa-memo"></i>Zoomcar Host Vehicles Policies</a>
-        <a href=""><i class="fa-solid fa-phone"></i>Help & Support</a>
-        
+        <div class = "cityName">
+              Bangalore
+        </div>
+      
+      </a>
+      <a href="">Supermiler club</a>
+      <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Fleet Vehicles Policies </a>
+      <a href=""><i class="fa-solid fa-file-lines"></i>Zoomcar Host Vehicles Policies</a>
+      <a href=""><i class="fa-solid fa-phone"></i>Help & Support</a>
+      
     </div>
 
     <div id="container">
       <div id="filter-box">
             <div class = "heading-list">Seats</div>
             <div class = "list-items">
-              <div class = "filtertext"><div>5</div></div>
+              <div class = "list-box"><div class = "filtertext" id = "filter5">5</div></div>
               <div class = "line-between"></div>
-              <div class = "filtertext"><div>7</div></div>
+              <div class = "list-box"><div class = "filtertext" id = "filter7">7</div></div>
             </div>
 
             <div class = "heading-list">Car Types</div>
             <div class = "list-items1">
-              <div class = "text1 filtertext"><div>SUV</div></div>
+              <div  class = "list-box"><div class = "text1 filtertext" id = "filtersuv">SUV</div></div>
               <div class = "line-between"></div>
-              <div class = "text1 filtertext"><div>hatchback</div></div>
+              <div class = "list-box" ><div class = "text1 filtertext" id = "filterhatchback">hatchback</div></div>
             </div>
 
             <div class = "heading-list">Transmission</div>
             <div class = "list-items">
-              <div class = "filtertext"><div>Manual</div></div>
+              <div class = "list-box"><div class = "filtertext" id = "filtermanual">Manual</div></div>
               <div class = "line-between"></div>
-              <div class = "filtertext"><div>Automatic</div></div>
+              <div class = "list-box"><div class = "filtertext" id = "filterautomatic">Automatic</div></div>
             </div>
 
             <div class = "heading-list">Delivery Type</div>
             <div class = "list-items">
-              <div class = "filtertext"><div>Home Delivery</div></div>
+              <div class = "list-box" ><div class = "filtertext" id = "filterhome">Home Delivery</div></div>
               <div class = "line-between"></div>
-              <div class = "filtertext"><div>Airport</div></div>
+              <div  class = "list-box"><div class = "filtertext" id = "filterairport">Airport</div></div>
             </div>
 
             <div class = "info-bluebox">
@@ -99,22 +97,24 @@
             </div>
         </div>
 
-      <div id="cars-box">
-
-        <div class = "info-box">
-          <div class = "heading"> 
-            <h5>ENJOY FREE KMS</h5> 
-          </div>
-          
-          <div class = "text"> 
+        <div id = "container-right">
+          <div class = "info-box">
+            <div class = "heading"> 
+              <h5>ENJOY FREE KMS</h5> 
+            </div>
             
-            <p>If you leave the car with Excess fuel compared to booking start,
-            value of that extra fuel will be refunded to you</p> 
+            <div class = "text"> 
+              
+              <p>If you leave the car with Excess fuel compared to booking start,
+              value of that extra fuel will be refunded to you</p> 
+            </div>
           </div>
-            
-        </div>
+  
+            <div id="cars-box">
+              
+           </div>
 
-      </div>
+        </div>  
     </div>
   </body>
   <script src = "booking.js"></script>
