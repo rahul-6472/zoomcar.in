@@ -77,6 +77,16 @@
             font-size: 15px;
             color: grey;
         }
+        #register-name-at:focus{
+            outline: none !important;
+            border: 2px solid rgb(6, 188, 6);
+            border-radius: 3px;
+        }
+        #register-password-at:focus{
+            outline: none !important;
+            border: 2px solid rgb(6, 188, 6);
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
@@ -132,7 +142,9 @@
 
         registeredusers.push(data);
         localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
-        location.href = "./otp-form.html";
+        localStorage.removeItem("mobilenumber");
+        localStorage.removeItem("email");
+        location.href = "./signup-otp-form.html";
     });
 
 

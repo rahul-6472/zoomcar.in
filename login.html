@@ -160,8 +160,13 @@
             margin-top: 2%;
 
         }
-        #login-countryandnumber-at>select,input:active{
-            border: 1px solid rgb(6, 188, 6);
+        #login-countryandnumber-at>select:focus{
+                outline: none !important;
+                border: 2px solid rgb(6, 188, 6);
+        }
+        #login-countryandnumber-at>select:active{
+                outline: none !important;
+                border: 2px solid rgb(6, 188, 6);
         }
         
         #modal-btn-at{
@@ -236,7 +241,14 @@
             text-align: center;
             cursor: pointer;
             }
-
+            #login-mob-number-at:focus{
+                outline: none !important;
+                border: none;
+            }
+            #login-modal-mob-number-at:focus{
+                outline: none !important;
+                border: 2px solid rgb(6, 188, 6);
+            }
     </style>
 </head>
 <body>
@@ -283,7 +295,7 @@
                         <option value="Indonesia">Indonesia </option>
                     </select>
         
-                    <input type="tel" placeholder="Enter Mobile Number" id="login-modal-mob-number-at" required/>
+                    <input type="tel" placeholder="Enter Mobile Number" id="login-modal-mob-number-at"/>
                 </div>
             </div>
             <div id="modal-btn-at"><button id="modal-button-at">Continue</button></div>
@@ -320,18 +332,18 @@
 
     
     document.getElementById("login-mob-number-at").addEventListener("click", function(){
-        event.preventDefault();
+        // event.preventDefault();
         document.querySelector(".entermobnumber-at").style.visibility = "visible";
     });
 
 
     document.getElementById("modal-goback-at").addEventListener("click", function(){
-        event.preventDefault();
+        // event.preventDefault();
         document.querySelector(".entermobnumber-at").style.visibility = "hidden";
     });
 
     document.getElementById("login-modal-mob-number-at").addEventListener("input",function(){
-        event.preventDefault();
+        // event.preventDefault();
         let cnt = document.getElementById("login-modal-mob-number-at").value;
         // cnt = parseInt(cnt);
         if(cnt.length == 10){
@@ -343,7 +355,7 @@
         }
     })
     document.getElementById("login-modal-mob-number-at").addEventListener("keydown",function(){
-        event.preventDefault();
+        // event.preventDefault();
         let cnt = document.getElementById("login-modal-mob-number-at").value;
         // cnt = parseInt(cnt);
         if(cnt.length < 11 || cnt.length > 11){
@@ -355,7 +367,7 @@
     });
 
     document.getElementById("cancel").addEventListener("click",function(){
-        event.preventDefault();
+        // event.preventDefault();
         document.querySelector(".login-registermodal-at").style.visibility = "hidden";
     });
     // -------------------------modal events end-------------------------
@@ -371,10 +383,12 @@
         let mobnum = document.getElementById("login-modal-mob-number-at").value;
         let flag = 0;
         // console.log(mobnum);
+        let user1;
         registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
         registeredusers.forEach(function(user){
             if(mobnum == user.phone){
                 flag = 1;
+                user1 = user.phone;
             }
             
         });
@@ -387,9 +401,12 @@
             localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
         }
         else{
+            localStorage.setItem("user",user1);
             localStorage.setItem("registeredusers",JSON.stringify(registeredusers));
-            location.href="./login-2.html";
+            location.href="./login-otp-form.html";
         }
+        
     });
+
 </script>
 </html>
