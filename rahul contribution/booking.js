@@ -82,13 +82,44 @@ let carsDetails = [
     delivery: "Home Delivery & pickup available",
     rentprice: "2,700",
   },
+  {
+    carimage:
+      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/14bbe6f0419d819891f9c4b76b798130fa2d7732.JPG?1627102878",
+
+    carname: "Maruti S-Cross",
+    transmission: "Automatic",
+    fueltype: "petrol",
+    seats: "7seats",
+    cartype: "hatchback",
+    deliverytype: "Airport",
+    ratings: "5 (8) 26,057 kms driven",
+    delivery: "Home Delivery & pickup available",
+    rentprice: "2,700",
+  },
+  {
+    carimage:
+      "https://s3-ap-southeast-1.amazonaws.com/zoomcar/photographs/original/14bbe6f0419d819891f9c4b76b798130fa2d7732.JPG?1627102878",
+
+    carname: "Maruti S-Cross",
+    transmission: "Automatic",
+    fueltype: "petrol",
+    seats: "7seats",
+    cartype: "hatchback",
+    deliverytype: "Airport",
+    ratings: "5 (8) 26,057 kms driven",
+    delivery: "Home Delivery & pickup available",
+    rentprice: "2,700",
+  },
 ];
 
 localStorage.setItem("carsDetailsData", JSON.stringify(carsDetails));
 
 function displayData(carsDetails) {
   document.getElementById("cars-box").innerHTML = "";
-  carsDetails.forEach((car) => {
+  carsDetails.forEach((car, index) => {
+    if (index > 3) {
+      return;
+    }
     let card = document.createElement("div");
 
     let imageDiv = document.createElement("div");
@@ -138,6 +169,10 @@ function displayData(carsDetails) {
     let bookBtn = document.createElement("button");
     bookBtn.innerText = "BOOK NOW";
     bookBtn.setAttribute("class", "bookBtn");
+
+    bookBtn.addEventListener("click", () => {
+      window.location.href = "checkout.html";
+    });
 
     priceDiv.append(price, bookBtn);
 
@@ -290,4 +325,8 @@ function filterForAirport(carsDetails) {
 document.getElementById("filterairport").addEventListener("click", function () {
   let data = filterForAirport(carsDetails);
   displayData(data);
+});
+
+document.querySelector(".bookBtn").addEventListener("click", () => {
+  window.location.href = "checkout.html";
 });

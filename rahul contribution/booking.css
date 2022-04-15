@@ -119,12 +119,12 @@ body {
 }
 #container > #filter-box {
   width: 20%;
-  height: 85vh;
+  height: auto;
   margin: 0;
   position: absolute;
   top: 90px;
   left: 20px;
-  z-index:-1;
+  z-index: -1;
   background-color: white;
   padding: 25px 54px;
   border-radius: 4px;
@@ -143,7 +143,7 @@ body {
   top: 160px;
   right: 0px;
   padding-left: -100px;
-  z-index:-1;
+  z-index: -1;
 }
 #cars-box {
   width: 90%;
@@ -169,7 +169,6 @@ body {
   background: #fff;
   color: #212121;
   height: 50px;
-
   margin-bottom: -100px;
   width: 90%;
   padding: 20px 8px 20px 20px;
@@ -331,4 +330,30 @@ body {
 .list-box {
   padding: 10px 25px;
   border-radius: 4px;
+}
+
+@media all and (max-width: 900px) {
+  #cars-box {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-top: 10x;
+    gap: 12px;
+  }
+  #cars-box > div {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #container > #container-right {
+    width: 100%;
+  }
+  #container > #filter-box {
+    display: none;
+  }
+  #container-right .info-box {
+    width: 85%;
+  }
 }
