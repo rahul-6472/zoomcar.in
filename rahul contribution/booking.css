@@ -138,9 +138,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   position: absolute;
-  top: 160px;
+  top: 90px;
   right: 0px;
   padding-left: -100px;
   z-index: -1;
@@ -250,7 +249,7 @@ body {
   background-color: #f0f4ff;
   color: #5160c2;
   font-size: 12px;
-  padding: 12px 16px;
+  padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 24px;
 }

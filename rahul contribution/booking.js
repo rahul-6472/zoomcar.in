@@ -37,7 +37,7 @@ let carsDetails = [
     deliverytype: "Home Delivery",
     ratings: "4.7 (66) 72,936 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "1,601",
+    rentprice: 1601
   },
   {
     carimage:
@@ -51,7 +51,7 @@ let carsDetails = [
     deliverytype: "Home Delivery",
     ratings: "4.7 (66) 40,936 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "1,497",
+    rentprice: 1497
   },
   {
     carimage:
@@ -65,7 +65,7 @@ let carsDetails = [
     deliverytype: "Home Delivery",
     ratings: "4.5 (69) 89,977 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "1,775",
+    rentprice: 1775
   },
 
   {
@@ -80,7 +80,7 @@ let carsDetails = [
     deliverytype: "Airport",
     ratings: "5 (8) 26,057 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "2,700",
+    rentprice: 2700,
   },
   {
     carimage:
@@ -94,7 +94,7 @@ let carsDetails = [
     deliverytype: "Airport",
     ratings: "5 (8) 26,057 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "2,700",
+    rentprice: 2700
   },
   {
     carimage:
@@ -108,11 +108,11 @@ let carsDetails = [
     deliverytype: "Airport",
     ratings: "5 (8) 26,057 kms driven",
     delivery: "Home Delivery & pickup available",
-    rentprice: "2,700",
+    rentprice: 2700
   },
 ];
 
-localStorage.setItem("carsDetailsData", JSON.stringify(carsDetails));
+
 
 function displayData(carsDetails) {
   document.getElementById("cars-box").innerHTML = "";
@@ -172,6 +172,9 @@ function displayData(carsDetails) {
 
     bookBtn.addEventListener("click", () => {
       window.location.href = "checkout.html";
+      let carDetails = []
+      carDetails.push(car)
+      localStorage.setItem("carsDetailsData", JSON.stringify(carDetails));
     });
 
     priceDiv.append(price, bookBtn);

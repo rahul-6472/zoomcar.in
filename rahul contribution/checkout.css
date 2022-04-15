@@ -180,8 +180,8 @@ body {
   text-align: left;
 }
 
-.text2{
-  margin-right:20px;
+.text2 {
+  margin-right: 20px;
 }
 .text2 > h6 {
   font-size: 14px;
@@ -214,4 +214,56 @@ body {
   color: #10a310;
   font-weight: bold;
   margin-top: 2px;
+}
+#container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardDiv {
+  width: 50%;
+  margin: auto;
+}
+
+.nameImageDiv {
+  width: 85%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 0 0 0 10px;
+  margin-bottom: 20px;
+  margin-left: 64px;
+}
+.nameImageDiv > img {
+  width: 180px;
+  height: auto;
+}
+.nameDiv,
+.iconDiv,
+.ratingsDiv {
+  display: flex;
+}
+.iconDiv,
+.ratingsDiv {
+  margin-left: 64px;
+}
+.nameDiv > p {
+  margin-right: 10px;
+  font-weight:600;
+  font-size:22px;
+}
+.iconDiv > img {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.ratingsDiv > img {
+  width: 24px;
+  height: 24px;
+  margin-top: 12px;
+  margin-right: 12px;
 }

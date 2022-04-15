@@ -17,6 +17,9 @@ function openNav() {
     document.getElementById("side-navbar").style.width = "0";
     document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0)";
     document.getElementById("main").style.width = "0";
+
+
+    
     document.getElementById("main").style.height = "0";
     document.getElementById("main").style.position = "none";
     document.getElementById("main").style.top = "0";
