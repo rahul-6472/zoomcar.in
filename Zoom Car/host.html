@@ -50,7 +50,8 @@
         }
         #pare2>div>button{
             height: 42px;
-            width: 170px;
+            padding-left: 10px;
+            padding-right: 10px;
             color: white;
             font-size: 20px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -150,10 +151,12 @@
         #top1>img{
            box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
         }
+        #top1>div{
+            position: absolute;
+            top: 100px;
+            left: 16%;
+        }
         #top1>div>b{
-            position:absolute;
-            top: 120px;
-            left: 15%;
             width:450px;
             color: white;
             font-size:34px;
@@ -161,24 +164,28 @@
         }
         #top1>div>p{
             width:800px;
-            position: absolute;
-            top: 230px;
-            left: 15%;
             color: white;
             font-size:17px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
         #top1>div>a>button{
-            position: absolute;
-            top: 280px;
-            left: 15%;
             height: 42px;
-            width: 170px;
+            padding-left: 10px;
+            padding-right: 10px;
             color: white;
             font-size: 20px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border: 0.5px solid black;
             border-radius: 6px;
             background-color: rgb(46, 159, 46);
+        }
+        @media all and (min-width: 1350px){
+            #top1>div{
+                position: absolute;
+            top: 100px;
+            left: 30%;
+            }
         }
 
         /* Video */
@@ -284,7 +291,11 @@
         }
 
         
-        
+        #top4{
+            display: flex;
+            flex-direction: column;
+            width:90%;
+        }
         #top4>div>h3{
             margin-top: 100px;
             margin-left: 80px;
@@ -293,7 +304,8 @@
         }
         #child{
             display: flex;
-            min-width: 750px;
+            min-width: 860px; 
+            max-width:1000px;
             margin-left:10%;
             overflow:auto;
         }
@@ -314,6 +326,14 @@
             color: #616468;
             font-family:'Times New Roman', Times, serif;
             text-align: justify;
+        }
+        @media all and (min-width: 1350px){
+            #top4{
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
         }
 
 
@@ -354,9 +374,17 @@
             font-family: IBM Plex Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             color: #82868b;
         }
+        @media all and (min-width: 1350px){
+            #top5{
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+        }
 
 
-
+        
         #top6>h3{
             min-width: 700px;
             margin-left: 80px;
@@ -369,7 +397,7 @@
         }
         #top6>button{
             height: 48px;
-            width: 170px;
+            width:180px;
             color: white;
             margin-left: 80px;
             margin-bottom: 20px;
@@ -395,12 +423,10 @@
             border-radius: 10px;
         }
         #top6>div>img{
-            /* height: 180px; */
             padding-left: 75%;
             padding-right: 5%;
             padding-top: 50px;
             padding-bottom: 180px;
-            /* padding: auto; */
         }
         #child3{
             display: flex;
@@ -436,6 +462,14 @@
             text-align: justify;
             font-size: 16px;
             margin-bottom: 20px;
+        }
+        @media all and (min-width: 1350px){
+            #top6{
+            width: 1200px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
         }
 
 
@@ -505,10 +539,12 @@
 
     <!-- Content -->
     <div id="top1">
-        <img src="https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg">
-        <div><b>Share Your Car and Earn up to 50k per month</b></div>
-        <div><p>Get upto Rs 10,000/- on sign-up</p></div>
-        <div><a><button>Start Earning</button></a></div>
+    <img src="https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg">
+    <div>
+        <b>Share Your Car and Earn<br>up to 50k per month</b>
+        <p>Get upto Rs 10,000/- on sign-up</p>
+        <a><button>Start Earning</button></a>
+    </div>
     </div> 
 
     <!-- Video -->
@@ -562,6 +598,7 @@
     </div>
 
     <div id="top4">
+        
         <div><h3>How We Protect Your Car</h3></div><br><br>
         <div id="child">
             <div>
@@ -642,8 +679,23 @@
 </body>
 <script>
 
+//Scroll
+// const nav = document.querySelector("#navbar");
+//     const NavTop = nav.offsetTop;
+
+//     function fixnavbar(){
+//       if(window.scrollY >= NavTop){
+//         document.body.style.paddingTop = nav.offsetHeight + "px";
+//         document.body.classList.add("fixed-nav");
+//       }else {
+//         document.body.style.paddingTop = 0;
+//         document.body.classList.remove("fixed-nav");
+//       }
+//     }
+//     window.addEventListener("scroll", fixnavbar);
+
 //mute button
-function unmuteFn(){
+        function unmuteFn(){
         document.getElementById("video_0").muted = false;
         document.getElementById("button").value = "volume_on"
 
