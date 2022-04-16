@@ -12,6 +12,8 @@ document.querySelector("#pay-btn").innerText =
   "PROCEED TO PAY" + " " + "" + "₹" + " " + totalFare;
 
 document.getElementById("carNameType").innerText =
-  paymentData[0].carname +
-  paymentData[0].transmission +
+  paymentData[0].carname + " " + 
+  paymentData[0].transmission + " " +
   paymentData[0].fueltype;
+
+localStorage.setItem("TOTALFARE", totalFare)

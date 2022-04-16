@@ -332,6 +332,9 @@ body {
 }
 
 @media all and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
   #cars-box {
     width: 100%;
     grid-template-columns: 1fr;
@@ -340,19 +343,30 @@ body {
     gap: 12px;
   }
   #cars-box > div {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction:row-reverse;
+    justify-content: space-between;
     align-items: center;
   }
 
   #container > #container-right {
-    width: 100%;
+    width: fit-content;
   }
   #container > #filter-box {
     display: none;
   }
   #container-right .info-box {
-    width: 85%;
+    width: 94%;
+  }
+  .bookBtn{
+    display:none;
+  }
+  .detailsDiv {
+    margin-left:-98px;
+    padding: 20px 20px;
+  }
+  .price{
+    display:none;
   }
 }
