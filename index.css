@@ -108,9 +108,8 @@ body {
 }
 #pic div {
   margin: 0 auto;
-  margin-top:25%;
+  margin-top: 25%;
 }
-
 
 #pic form {
   width: 400px;
@@ -140,8 +139,6 @@ body {
 }
 
 /* popup for trip start time */
-
-
 
 #pic label {
   font-size: 14px;
@@ -255,15 +252,16 @@ body {
   padding: 100px 0px;
   flex-wrap: wrap;
   background-color: rgb(235, 235, 240);
+  position: relative;
+  z-index: -1;
 }
-#refer,
-#login {
+#refer {
   position: relative;
   display: flex;
   height: 150px;
-  max-width: 600px;
+  max-width: 1000px;
   width: 500px;
-  min-width: 400px;
+  min-width: 900px;
   margin: 10px;
   border: 1.5px solid rgb(190, 181, 181);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -272,7 +270,12 @@ body {
 #loginsection img {
   width: 40px;
 }
-
+#imgsidecontent > p{
+  line-height: 1.5;
+  color: #666;
+  font-size: 14px;
+ 
+}
 #imgsidecontent {
   position: absolute;
   top: 30px;
