@@ -309,7 +309,7 @@
             <p>Enter Card Details</p>
             <p>Amount: amount to be paid</p>
             <form>
-                <input type="tel" id="cardnumber-at" placeholder="Enter Card Number" class="inp-at" maxlength="18" />
+                <input type="tel" id="cardnumber-at" placeholder="Enter Card Number" class="inp-at" maxlength="25" />
                 <input type="tel" id="expiry-at" placeholder="Expiry date (MM/YY)" class="inp-at" maxlength="7" />
                 <input type="password" id="cvv-at" placeholder="CVV" class="inp-at" maxlength="3" />
                 <button id="payment-btn-at">Pay</button>
@@ -354,7 +354,7 @@
     document.getElementById("cardnumber-at").addEventListener("input", function () {
         let input = document.querySelector("#cardnumber-at").value;
         let input1 = document.querySelector("#cardnumber-at");
-        if (input.length == 4 || input.length == 11) {
+        if (input.length == 4 || input.length == 11 || input.length == 18) {
             input += " - ";
 
         }
@@ -375,7 +375,7 @@
         let expiry = document.querySelector("#expiry-at").value;
         let cvv = document.querySelector("#cvv-at").value;
 
-        if (card.length == 18 && expiry.length == 7 && cvv.length == 3) {
+        if (card.length == 25 && expiry.length == 7 && cvv.length == 3) {
             document.querySelector("#payment-btn-at").style.background = "rgb(6, 188, 6)";
             document.querySelector("#payment-btn-at").style.color = "rgb(256, 256, 256)";
         }

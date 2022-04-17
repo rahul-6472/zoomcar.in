@@ -255,6 +255,14 @@
     document.getElementById("modal-button-at").addEventListener("click", function () {
         let otp = document.getElementById("register-name-at").value;
         if (otp == "654321") {
+            let registeredusers = JSON.parse(localStorage.getItem("registeredusers"));
+            let user1 = localStorage.getItem("user");
+            console.log(user1);
+            registeredusers.forEach(function(user){
+            if(user1 == user.phone){
+                localStorage.setItem("userinfo",JSON.stringify(user));
+            }
+        });
             location.href="./index.html";
         }
         else{
@@ -295,6 +303,7 @@
         console.log(user1);
         registeredusers.forEach(function(user){
             if(user1 == user.phone && pass == user.password){
+                localStorage.setItem("userinfo",JSON.stringify(user));
                 flag = 1;
             }
         });
