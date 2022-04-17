@@ -14,19 +14,24 @@
             position: sticky;
             top: 0px;
             width: 100%;
-            display: flex;
             height: 60px;
             background-color: black;
-            justify-content: space-evenly;
         }
-
+        #nav{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+            
+        }
         #pare1{
             display: flex;
             align-items: center;
-            margin-left: 8%;
         }
         #menu{
-            margin-right: 50px;
+            margin-right: 30px;
+            margin-left: 22px;
         }
         #menu>div{
             width: 35px;
@@ -58,7 +63,7 @@
             padding-left: 10px;
             padding-right: 10px;
             color: white;
-            font-size: 20px;
+            font-size: 16px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border: 0.5px solid black;
             border-radius: 6px;
@@ -145,7 +150,12 @@
     font-size: 0;
   }
 }
-
+        /* King */
+        #king{
+            width: 90%;
+            margin: auto;
+            max-width: 1300px;
+        }
 
         /* Content */
         #top1{
@@ -156,21 +166,24 @@
             z-index:-1;
             }
         #top1>img{
-           box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+        width: 100%;
+        min-width: 900px;
+        max-width: 1300px;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
         }
         #top1>div{
             position: absolute;
             top: 50px;
-            left: 16%;
+            left:40px;
+            min-width: 700px;
         }
         #top1>div>b{
-            width:450px;
             color: white;
-            font-size:34px;
+            font-size: 42px;
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         #top1>div>p{
-            width:800px;
             color: white;
             font-size:17px;
             margin-top: 40px;
@@ -187,13 +200,6 @@
             border-radius: 6px;
             background-color: rgb(46, 159, 46);
         }
-        @media all and (min-width: 1350px){
-            #top1>div{
-                position: absolute;
-            top: 100px;
-            left: 30%;
-            }
-        }
 
         /* Video */
         #video{
@@ -209,17 +215,17 @@
 
         /* Mute/Unmute in Video */
         @font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+         font-family: 'Material Icons';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
         }
 
         #video>#button{
             position: absolute;
-            top: 830px;
-            right: 7%;
+            margin-top: 430px;
+            margin-left: 80%;
             width:38px;
             height: 38px;
            font-family: 'Material Icons';
@@ -231,16 +237,16 @@
            background-color: rgba(195, 199, 196, 0.744);
         }
 
+        
         /* Content */
         #top2{
            display: flex;
            justify-content: center;
         }
         #top2>a>img{
-           width: 1000px;
+           width: 100%;
            margin-top: 50px;
         }
-
 
 
 
@@ -293,12 +299,13 @@
                 max-width: 0px;
             }
             .box1{
-                width: 80%;
+                width: 100%;
                 margin:auto
             }
         }
 
         
+
         #top4{
             display: flex;
             flex-direction: column;
@@ -306,10 +313,10 @@
         }
         #top4>div>h3{
             margin-top: 100px;
-            margin-left: 80px;
             font-size: 40px;
             font-family:'Times New Roman', Times, serif;
         }
+
         #child{
             display: flex;
             min-width: 860px; 
@@ -335,27 +342,17 @@
             font-family:'Times New Roman', Times, serif;
             text-align: justify;
         }
-        @media all and (min-width: 1350px){
-            #top4{
-            width: 1200px;
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-        }
-        }
-
-
         
+        
+
         #top5>h3{
             margin-top: 120px;
-            margin-left: 10%;
             font-size: 45px;
             font-family:'Times New Roman', Times, serif;
         }
         #top5>p{
             color:#616468;
             margin-top: 80px;
-            margin-left: 10%;
             font-size: 18px;
         }
         #top5>#child2{
@@ -370,6 +367,7 @@
             height: 280px;
             border-right: 2px solid #e0e0e0;;
         }
+
         #child2>div>img{
             margin-top: 30px;
             margin-bottom: 50px;
@@ -382,22 +380,13 @@
             font-family: IBM Plex Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
             color: #82868b;
         }
-        @media all and (min-width: 1350px){
-            #top5{
-            width: 1200px;
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-        }
-        }
-
 
         
         #top6>h3{
             min-width: 700px;
-            margin-left: 80px;
             margin-top: 80px;
-            font-size: 50px;
+            margin-left: 4%;
+            font-size: 40px;
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         #top6>h3>span{
@@ -407,8 +396,8 @@
             height: 48px;
             width:180px;
             color: white;
-            margin-left: 80px;
             margin-bottom: 20px;
+            margin-left: 4%;
             font-size: 20px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border: 0.5px solid black;
@@ -418,15 +407,15 @@
         }
         #top6>a{
             color: #1bb11b;
-            margin-left: 80px;
-            
+            margin-left: 4%;
         }
 
         #top6>div{
             display: flex;
             justify-content: center;
+            max-height: fit-content;
             min-width: 900px;
-            margin: 5%;
+            margin-top: 4%;
             background-image: linear-gradient(270deg,#444,#000);
             border-radius: 10px;
         }
@@ -436,20 +425,21 @@
             padding-top: 50px;
             padding-bottom: 180px;
         }
+
         #child3{
             display: flex;
             flex-direction: column;
             color: white;
         }
         #child3>h3{
-            font-size: 40px;
+            font-size: 33px;
             margin-left: 60px;
             margin-top: -320px;
         }
         #child3>#p{
-            font-size: 20px;
+            font-size: 18px;
             margin-left: 60px;
-            margin-top: -30px;
+            margin-top: -40px;
         }
         #child3>button{
             height: 48px;
@@ -471,14 +461,6 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
-        @media all and (min-width: 1350px){
-            #top6{
-            width: 1200px;
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-        }
-        }
 
 
 
@@ -486,14 +468,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            width: 90%;
-            margin:auto;
             margin-top: 70px;
             background-color: #f5f5f5;
             border-radius: 10px;
             font-size: 25px;
             text-align: center;
         }
+
 
         *{
             text-decoration: none;
@@ -504,6 +485,7 @@
 <body>
     <!-- Navbar -->
     <div id="navbar">
+        <div id="nav">
       <div id="pare1">
         <a><div id="menu" onclick = "openNav()">
             <div></div>
@@ -519,6 +501,7 @@
             <div><a>SignUp/LogIn</a></div>
             <div><button>START EARNING</button></div>
       </div>
+    </div>
     </div>
 
     <!-- Side-Navbar -->
@@ -544,7 +527,7 @@
         
       </div>
 
-
+      <div id="king">
     <!-- Content -->
     <div id="top1">
     <img src="https://www.zoomcar.com/zap/subscribe/build/a2ff940380f1315a0c0aacefb766e858.jpg">
@@ -617,7 +600,7 @@
             <div>
                 <img src="https://www.zoomcar.com/zap/subscribe/build/1f4b5b69d928bbf104735bdea4914f79.svg">
                 <b>Your Car Stays in Safe Hands!</b>
-                <p>All our renters are verified individuals with valid Driving license, and have excellent driving stats in the past on our platform. We have complete contact and address details of all our renters.;jfdakl;jfa</p>
+                <p>All our renters are verified individuals with valid Driving license, and have excellent driving stats in the past on our platform. We have complete contact and address details of all our renters.</p>
             </div>
             <div>
                 <img src="https://www.zoomcar.com/zap/subscribe/build/eb002ff59dd838a60fd664d21539d877.svg">
@@ -684,6 +667,7 @@
             <source type="video/mp4" src="https://www.zoomcar.com/zap/subscribe/build/c35001c9c8b0c1ccc0a97a7a810110aa.mp4">
         </video>
     </div>
+</div>
 </body>
 <script>
 
