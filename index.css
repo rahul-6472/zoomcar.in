@@ -270,11 +270,10 @@ body {
 #loginsection img {
   width: 40px;
 }
-#imgsidecontent > p{
+#imgsidecontent > p {
   line-height: 1.5;
   color: #666;
   font-size: 14px;
- 
 }
 #imgsidecontent {
   position: absolute;
@@ -305,6 +304,20 @@ body {
   display: none;
 }
 
+#refer,
+#login {
+  position: relative;
+  display: flex;
+  height: 150px;
+  max-width: 600px;
+  width: 500px;
+  min-width: 400px;
+  margin: 10px;
+  border: 1.5px solid rgb(190, 181, 181);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
 #scrollsection img {
   width: 280px;
   height: fit-content;
@@ -316,6 +329,8 @@ body {
   width: 100%;
   justify-content: center;
   background-color: #f5f5f5;
+  margin-top: -35px;
+  padding-top: 25px;
 }
 #aboutsection .centerp {
   width: 100%;
@@ -341,11 +356,10 @@ body {
   color: #1f1f1f;
 }
 
-#spanspan-at{
+#spanspan-at {
   font-size: 1.6rem;
 }
-#loginn-at{
-
+#loginn-at {
   display: flex;
   align-items: center;
   width: 100%;
@@ -360,12 +374,10 @@ body {
 
 /* login on navbar */
 
-
-#spanspan-at{
+#spanspan-at {
   font-size: 1.6rem;
 }
-#loginn-at{
-
+#loginn-at {
   display: flex;
   align-items: center;
   width: 100%;
@@ -390,7 +402,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #cecece;
+  border: 0.2px solid #cecece;
 }
 
 .accordian .content-box .label::before {
@@ -425,7 +437,7 @@ body {
 .accordian a {
   text-decoration: none;
   font-size: 12px;
-  margin-bottom: 12px;
+  margin-top: 12px;
   color: #323a44;
 }
 
