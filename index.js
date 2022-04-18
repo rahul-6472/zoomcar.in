@@ -23,4 +23,8 @@ function closeNav() {
   document.getElementById("main").style.left = "0";
 }
 
+let accordian = document.querySelector(".content-box");
 
+accordian.addEventListener("click", () => {
+  accordian.classList.toggle("active");
+});
