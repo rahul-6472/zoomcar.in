@@ -28,3 +28,11 @@ let accordian = document.querySelector(".content-box");
 accordian.addEventListener("click", () => {
   accordian.classList.toggle("active");
 });
+
+let userinfo = JSON.parse(localStorage.getItem("userinfo"));
+if (userinfo != null) {
+  let ele = document.getElementById("loginn-at");
+  ele.innerHTML = ` <a href="afterlogin.html" id="loginn-at">${userinfo.name} &nbsp; &nbsp;<span class="material-icons-outlined" id="spanspan-at">
+  account_circle
+  </span></a>`;
+}
