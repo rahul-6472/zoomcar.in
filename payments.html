@@ -252,6 +252,15 @@
         font-size: 15px;
         cursor: pointer;
       }
+      #navbar-section-1-at a {
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        margin-left: 12px;
+      }
+      #navbar-section-1-at #price {
+        margin-top: 8px;
+      }
     </style>
   </head>
 
@@ -259,10 +268,10 @@
     <div id="payments-main-cont-at">
       <div id="payments-navbar-at">
         <div id="navbar-section-1-at">
-          <p>&#8592;</p>
+          <a href="fare-summary.html">&#8592;</a>
           <div>
-            <p>Price To Pay</p>
-            <p>From date -- to date</p>
+            <p id="price">Price To Pay</p>
+            <!-- <p>From date -- to date</p> -->
           </div>
         </div>
       </div>
@@ -430,5 +439,7 @@
 
     document.getElementById("amount").innerText =
       "Amount: " + " " + "₹" + totalFare;
+
+    document.getElementById("price").innerText = "Pay  INR" + " " + totalFare;
   </script>
 </html>
