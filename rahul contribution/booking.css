@@ -213,20 +213,18 @@ body {
   margin-bottom: 30px;
   padding: 6px;
 }
-.filtertext {
-  padding: 0;
+.list-items .list-box .filtertext {
   font-size: 14px;
   line-height: 1.5;
   font-weight: bold;
+  cursor: default;
 }
 .text1 {
   padding: 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: bold;
-}
-#filter5 {
-  padding: 0 15px;
+  cursor: default;
 }
 
 #filter7 {
@@ -332,7 +330,7 @@ body {
 }
 
 @media all and (max-width: 900px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   #cars-box {
@@ -345,7 +343,7 @@ body {
   #cars-box > div {
     width: 100%;
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
   }
@@ -359,14 +357,14 @@ body {
   #container-right .info-box {
     width: 94%;
   }
-  .bookBtn{
-    display:none;
+  .bookBtn {
+    display: none;
   }
   .detailsDiv {
-    margin-left:-98px;
+    margin-left: -98px;
     padding: 20px 20px;
   }
-  .price{
-    display:none;
+  .price {
+    display: none;
   }
 }
